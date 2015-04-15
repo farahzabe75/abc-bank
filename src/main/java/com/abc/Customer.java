@@ -33,6 +33,17 @@ public class Customer {
             total += a.interestEarned();
         return total;
     }
+    public static void MoneyTransfer(Account to, Account from, double amount){
+    try
+    {
+    to.deposit(amount);
+    from.withdraw(amount);
+    }
+    catch(Exception e)
+    {
+    throw e;
+    }
+
 
     public String getStatement() {
         String statement = null;
